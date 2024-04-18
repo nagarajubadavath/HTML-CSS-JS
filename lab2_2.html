@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrafficLights</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+        }
+        .first{
+            height:400px;
+            width:200px;
+            border: 2px solid black;
+            background-color:brown;
+        }
+        .second{
+            height:200px;
+            width:100px;
+            border: 2px solid black;
+            margin-left: 50px;
+            margin-top: 100px;
+            background-color: blue;
+        }
+        .third{
+            height:20px;
+            width:20px;
+            border:2px solid black;
+            border-radius: 50px;
+            margin-top: 50px;
+            margin-left: 40px;
+        }
+        .third_two{
+            height:20px;
+            width:20px;
+            border:2px solid black;
+            border-radius: 50px;
+            margin-top: 40px;
+            margin-right: 40px;
+        }
+        .third_three{
+            height:20px;
+            width:20px;
+            border:2px solid black;
+            border-radius: 50px;
+            margin-top: 40px;
+            margin-right: 40px;
+        }
+    </style>
+    <script language="javascript">
+        function Start()
+        {
+            document.getElementById("green").style.backgroundColor="green";
+            document.getElementById("red").style.backgroundColor="black";
+            document.getElementById("yellow").style.backgroundColor="black";
+        }
+        function Stop()
+        {
+            document.getElementById("yellow").style.backgroundColor="black";
+            document.getElementById("red").style.backgroundColor="red";
+            document.getElementById("green").style.backgroundColor="black";
+        }
+        function Slow()
+        {
+            document.getElementById("red").style.backgroundColor="black";
+            document.getElementById("green").style.backgroundColor="black";
+            document.getElementById("yellow").style.backgroundColor="yellow";
+        }
+        function Reset()
+        {
+            document.getElementById("red").style.backgroundColor="black";
+            document.getElementById("green").style.backgroundColor="black";
+            document.getElementById("yellow").style.backgroundColor="black";
+        }
+    </script>
+</head>
+<body>
+        <div class="first">
+            <div class="second">
+                <div class="third" id="red">
+                    <div class="third_two" id="green">
+                        <div class="third_three" id="yellow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        &nbsp&nbsp&nbsp
+        <input type="button" value="start" id="start" onClick="Start()">
+        <input type="button" value="stop" id="stop" onClick="Stop()">
+        <input type="button" value="slow" id="slow" onClick="Slow()">
+        <input type="button" value="reset" id="reset" onClick="Reset()">
+</body>
+</html>
